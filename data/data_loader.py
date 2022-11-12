@@ -250,8 +250,13 @@ class Dataset_Custom(Dataset):
             data = self.scaler.transform(df_data.values)
             mean, std = self.scaler.getMeanStd()
             # 保存均值和方差
-            np.save(self.data_path + 'mean.npy', mean)
-            np.save(self.data_path + 'std.npy', std)
+            np.save(self.root_path + 'mean.npy', mean)
+            np.save(self.root_path + 'std.npy', std)
+            print("均值")
+            print(mean)
+            print("方差")
+            print(std)
+
         else:
             data = df_data.values
             
