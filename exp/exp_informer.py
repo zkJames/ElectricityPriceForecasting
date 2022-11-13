@@ -126,7 +126,9 @@ class Exp_Informer(Exp_Basic):
         train_data, train_loader = self._get_data(flag = 'train')
         vali_data, vali_loader = self._get_data(flag = 'val')
         test_data, test_loader = self._get_data(flag = 'test')
-
+        np.savetxt("train.txt", train_data.data_x)
+        np.savetxt("vali.txt", vali_data.data_x)
+        np.savetxt("test.txt", test_data.data_x)
         path = os.path.join(self.args.checkpoints, setting)
         if not os.path.exists(path):
             os.makedirs(path)
