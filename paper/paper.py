@@ -13,12 +13,12 @@ class StandardScaler():
     def inverse_transform(self, data):
         return (data * self.std) + self.mean
 
-plt.figure()
+# plt.figure()
 scaler = StandardScaler()
-plt.plot(scaler.inverse_transform(trues[0,:,-1]), label='GroundTruth')
-plt.plot(scaler.inverse_transform(preds[0,:,-1]), label='Prediction')
-plt.legend()
-plt.show()
+# plt.plot(scaler.inverse_transform(trues[0,:,-1]), label='GroundTruth')
+# plt.plot(scaler.inverse_transform(preds[0,:,-1]), label='Prediction')
+# plt.legend()
+# plt.show()
+print(scaler.inverse_transform(trues[20,:,-1]))
 
-
-#138991 -- 139014
+#138991 -- 167378
